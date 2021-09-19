@@ -11,7 +11,7 @@ function setCurrentColor(newColor) {
 }
 
 function setCurrentMode(newMode) {
-    ativateButton(newMode)
+    activateButton(newMode)
     currentMode = newMode
 }
 
@@ -30,11 +30,11 @@ const grid = document.getElementById('grid');
 
 colorPicker.onchange = (e) => setCurrentColor(e.target.value)
 colorBtn.onclick = () => setCurrentMode('color')
-rainbowBtn.onclick = () => etCurrentMode('rainbow')
+rainbowBtn.onclick = () => setCurrentMode('rainbow')
 eraserBtn.onclick = () => setCurrentMode('eraser')
 clearBtn.onclick = () => reloadGrid()
 sizeSlider.onmousemove = (e) => updateSizeValue(e.target.value)
-sizeSlider.onchange = (e) => chaneSize(e.target.value)
+sizeSlider.onchange = (e) => changeSize(e.target.value)
 
 function changeSize(value) {
     setCurrentSize(value)
@@ -74,7 +74,7 @@ function changeColor(e) {
         e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`
     } else if (currentMode === 'color') {
         e.target.style.backgroundColor = currentColor
-    } else if (currentmode === 'eraser') {
+    } else if (currentMode === 'eraser') {
         e.target.style.backgroundColor = '#fefefe'
     }
 }
@@ -101,6 +101,9 @@ window.onload = () => {
     setupGrid(DEFAULT_SIZE)
     activateButton(DEFAULT_MODE)
 }
+
+
+
 //remember for future use
 
 // function makeRows(rows, cols) {
