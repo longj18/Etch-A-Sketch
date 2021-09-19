@@ -5,11 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
     <title>Etch-A-Sketch</title>
 </head>
 
 <body>
-    <h1>Etch-A-Sketch</h1>
+    <div class="header">
+        <h1>Etch-A-Sketch</h1>
+    </div>
+    <main class="main">
+        <div class="settings">
+            <input id="colorPicker" type="color" value="#333333" />
+            <button id="colorBtn">Color mode</button>
+            <button id="rainbowBtn">Rainbow</button>
+            <button id="eraserBtn">Eraser</button>
+            <button id="clearBtn">Clear</button>
+            <div id="sizeValue" class="size-value">16 x 16</div>
+            <input id="sizeSlider" type="range" min="1" max="64" />
+        </div>
+        <div id="grid" class="grid"></div>
+    </main>
+    <footer class="footer">
+        <p>Not mine. credit goes to michalosman</p>
+
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
